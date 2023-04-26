@@ -1,0 +1,102 @@
+body {background-color:DarkSlateGray}
+
+h1{
+	font-family: arial black;
+	background-color: GoldenRod;
+	text-align: center;
+	vertical-align:middle;
+}
+
+h2{
+	text-align: center;
+	font-family: arial black;
+	background-color: GoldenRod;
+}
+.header {
+	text-align: center;
+	vertical-align:middle;
+	font-family: Arial Black;
+}
+	
+.main{
+	background-color:GoldenRod;
+	padding:10px;
+	margin:10px;
+	text-align: left;
+	font-family:arial black;
+	font-size:20px;
+}
+
+.home {
+	float:left;
+	width:175px;
+	height:175px;
+	content:url(home.png);
+}
+.logo {
+	float:right;
+	width: 200px;
+	height:121px;
+	content:url(logo.png);
+}
+
+.navigation {
+	list-style: none;
+	margin: 0;
+	background: GoldenRod;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+}
+
+.navigation a {
+	display: block;
+	padding: 1em;
+	color: black;
+	font-family:arial black;
+}
+.navigation a:hover{
+	background-color:yellow;
+}
+@media all and (max-width: 2000px) {
+	.navigation {
+		justify-content: space-around;
+	}
+}
+
+@media all and (max-width: 1500px) {
+	.navigation {
+		flex-flow: column wrap;
+		padding: 0;
+	}
+
+
+	.navigation a {
+	text-align: center;
+	padding: 20px;
+	border-top: 1px solid rgba(255,255,255,0.3);
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	}
+
+	.navigation li:last-of-type a {
+	border-bottom : none;
+	}
+}	
+
+.footer{
+	background: GoldenRod;
+	text-decoration: none;
+	text-align: center;
+}
+.column {
+  float: left;
+  width: 50%;
+  background: GoldenRod;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
